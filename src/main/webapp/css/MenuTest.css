@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#menu {
+    width: 300px;
+    height: 450px;
+    background: wheat;
+    margin: auto;
+    overflow: hidden;
+}
+#list {
+    width: 80px;
+    height: 450px;
+    background: indianred;
+    float: left;
+}
+#list li {
+    width: 80px;
+    height: 50px;
+    background: coral;
+}
+#main {
+    width: 220px;
+    height: 450px;
+    background: green;
+    float: right;
+}
+#main div {
+    width: 220px;
+    height: 450px;
+
+}

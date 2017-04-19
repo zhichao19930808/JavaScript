@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>菜单</title>
+    <link rel="stylesheet" href="css/MenuTest.css">
+</head>
+<body>
+<div id="menu">
+    <ul id="list">
+        <li style="background: green">主食</li>
+        <li>甜品</li>
+        <li>水果</li>
+        <li>凉菜</li>
+        <li>炒菜</li>
+    </ul>
+    <div id="main">
+        <div>主食。。。</div>
+        <div>甜品。。。</div>
+        <div>水果。。。</div>
+        <div>凉菜。。。</div>
+        <div>炒菜。。。</div>
+    </div>
+</div>
+
+<script>
+    var list = document.getElementById("list").getElementsByTagName("li"),
+        main = document.getElementById("main").getElementsByTagName("div");
+
+    for (var i=0;i<list.length;i++) {
+        list[i].index=i;
+        list[i].onclick =function () {
+            for (var j=0;j<main.length;j++) {
+                main[j].style.display="none";
+                list[j].style.background="coral";
+            }
+            main[this.index].style.display="block";
+            list[this.index].style.background="green";
+        }
+    }
+</script>
+</body>
+</html>

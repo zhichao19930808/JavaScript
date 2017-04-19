@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaScript.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaScript.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaScript_main.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaScript_main.iml" group="JavaScript" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaScript_test.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaScript_test.iml" group="JavaScript" />
     </modules>
   </component>
 </project>
