@@ -53,10 +53,12 @@
     }
     btn1.onclick=function () {
         s1 = setInterval(aa,100);
+        //禁止点击
+        btn1.disabled="disabled"
     };
     btn2.onclick=function () {
         clearInterval(s1);
-
+        btn1.disabled=""
     };
     //点击暂停  名字停止
 </script>
