@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>滚动</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #box {
+            height: 400px;
+            width: 400px;
+            background: wheat;
+            overflow: hidden;
+            margin: auto;
+        }
+
+        #roll {
+            height: 300px;
+            width: 2000px;
+            background: darkgreen;
+        }
+
+        #roll li {
+            width: 400px;
+            height: 300px;
+            float: left;
+        }
+
+        #roll img {
+            width: 400px;
+            height: 300px;
+        }
+
+        #box input {
+            width: 100px;
+            height: 50px;
+            background: darkolivegreen;
+            margin-left: 60px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <ul id="roll">
+        <li><img src="img/qikan_1.png"></li>
+        <li><img src="img/qikan_2.png"/></li>
+        <li><img src="img/qikan_3.png"/></li>
+        <li><img src="img/qikan_4.png"/></li>
+        <li><img src="img/qikan_1.png"/></li>
+    </ul>
+    <input type="button" value="开始" id="btn1"/>
+    <input type="button" value="暂停" id="btn2"/>
+</div>
+<script>
+    var sub = document.getElementById("roll"),
+        btn1 = document.getElementById('btn1'),
+        btn2 = document.getElementById('btn2');
+
+
+    function roll() {
+        //获取li的左外边距
+        var leftMargin = parseInt(sub.style.marginLeft);//parse  从语法上分析
+
+
+        if (!leftMargin) {
+            leftMargin = 0;
+        }
+        if (leftMargin > -1600) {
+            sub.style.marginLeft = leftMargin - 1 + 'px';
+        } else {
+            sub.style.marginLeft = 0 + 'px';
+        }
+    }
+
+    btn1.onclick = function () {
+        sl = setInterval(roll, 30);
+        btn1.disabled = 'disabled';
+    };
+    btn2.onclick = function () {
+        clearInterval(sl);
+        btn1.disabled = '';
+    }
+
+
+</script>
+</body>
+</html>
