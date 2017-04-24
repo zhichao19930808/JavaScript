@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #box {
+            width: 888px;
+            height: 666px;
+            margin: auto;
+            background: wheat;
+            overflow: hidden;
+            position: relative;
+
+        }
+        #imgs {
+            width: 4440px ;
+            height: 666px;
+        }
+        #imgs li {
+            width: 888px ;
+            height: 666px;
+            float: left;
+        }
+
+        #imgs img {
+            width: 888px;
+            height: 666px;
+        }
+        #list {
+            width: 185px;
+            height: 40px;
+            position: absolute;
+            bottom: 20px;
+            right: 40px;
+        }
+        #list li {
+            width: 40px;
+            height: 40px;
+            float: left;
+            background: green;
+            margin-right: 5px;
+            line-height: 40px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <ul id="imgs" >
+        <li><img src="img/qikan_1.png" alt=""></li>
+        <li><img src="img/qikan_2.png" alt=""></li>
+        <li><img src="img/qikan_3.png" alt=""></li>
+        <li><img src="img/qikan_4.png" alt=""></li>
+    </ul>
+    <ol id="list">
+        <li style="background: red">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ol>
+</div>
+
+<script>
+var imgs=document.getElementById("imgs").getElementsByTagName("li"),
+    list=document.getElementById("list").getElementsByTagName("li");
+//自动播
+var k=0;//初始值
+function auto() {
+    for (var i = 0; i < list.length; i++) {
+        imgs[i].style.display = 'none';
+        list[i].style.background = 'green';
+    }
+    imgs[k].style.display = 'block';
+    list[k].style.background = 'red';
+    k++;
+    if (k > list.length - 1) {
+        k = 0;
+    }
+
+}
+sl = setInterval(auto,2000);
+for (var i = 0; i < imgs.length; i++) {
+    list[i].index = i;
+    list[i].onmouseover = function () {//划过事件
+        clearInterval(sl);
+        for (var j = 0; j < list.length; j++) {//清场
+            imgs[j].style.display = "none";
+            list[j].style.background = "green";
+        }
+        list[this.index].style.background = "red";
+        imgs[this.index].style.display = "block";
+    };
+    list[i].onmouseout=function(){
+        k=this.index;
+        sl=setInterval(auto,2000);
+}
+
+}
+</script>
+</body>
+</html>
