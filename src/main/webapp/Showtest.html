@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #box {
+            margin: auto;
+            width: 600px;
+            height: 1000px;
+        }
+
+        #images img {
+            width: 594px;
+            height: 400px;
+        }
+        #images li {
+            position: relative;
+            border: red solid 3px;
+        }
+        #images p {
+            width: 594px;
+            height: 50px;
+            position: absolute;
+            bottom: 50px;
+            text-align: right;
+            background: green;
+            font-size: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <ul id="images">
+        <li>
+            <img src="img/qikan_1.png" >
+            <p>图片1</p>
+        </li>
+        <li>
+            <img src="img/qikan_2.png"/>
+            <p>图片2</p>
+        </li>
+        <li>
+            <img src="img/qikan_3.png"/>
+            <p>图片3</p>
+        </li>
+        <li>
+            <img src="img/qikan_4.png"/>
+            <p>图片4</p>
+        </li>
+    </ul>
+</div>
+
+<script>
+    var lis = document.getElementById("images").getElementsByTagName("li");
+    for (var i = 0; i < lis.length; i++) {
+        lis[i].onmouseover = function () {
+            this.style.border="3px solid green";
+            this.getElementsByTagName("p")[0].style.display="block";
+            this.getElementsByTagName("p")[0].style.color="red";
+        }
+        lis[i].onmouseout = function () {
+            this.style.border="3px solid red";
+            this.getElementsByTagName("p")[0].style.display="none";
+            this.getElementsByTagName("p")[0].style.color="red";
+        }
+    }
+</script>
+</body>
+</html>
