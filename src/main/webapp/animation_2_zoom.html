@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: red;
+            border-radius: 100px;
+            display: inline-block;
+        }
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background: green;
+            border-radius: 100px;
+            display: inline-block;
+        }
+        .box {
+            -webkit-animation: zoom 1s linear 0s infinite alternate;
+        }
+        .box1 {
+            -webkit-animation: zoom1 1s linear 0s infinite alternate;
+        }
+        @-webkit-keyframes zoom {
+            from{-webkit-transform: scale(0.6)}
+            to{-webkit-transform: scale(1.4)}
+        }
+        @-webkit-keyframes zoom1 {
+            from{-webkit-transform: scale(1.4)}
+            to{-webkit-transform: scale(0.6)}
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div><div class="box1"></div>
+</body>
+</html>
