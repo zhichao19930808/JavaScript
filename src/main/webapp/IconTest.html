@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图标</title>
+    <style>
+        #box {
+            height: 42px;
+            width: 168px;
+            background:wheat;
+            margin: auto;
+        }
+        #box a {
+            width: 42px;
+            height: 42px;
+            display: inline-block;
+            background: url("img/icons.png");
+            -webkit-transition: all 600ms;
+
+        }
+        #box a:nth-child(1) {
+            background-position:0 0 ;
+        }
+        #box a:nth-child(2) {
+            background-position:-42px 0 ;
+        }
+        #box a:nth-child(3) {
+            background-position: -84px 0 ;
+        }
+        #box a:nth-child(4) {
+            background-position:-126px 0 ;
+        }
+        #box a:nth-child(1):hover {
+            background-position:0 -42px ;
+        }
+        #box a:nth-child(2):hover {
+            background-position:-42px -42px ;
+        }
+        #box a:nth-child(3):hover {
+            background-position: -84px -42px ;
+        }
+        #box a:nth-child(4):hover {
+            background-position:-126px -42px ;
+        }
+    </style>
+</head>
+<body>
+<div id="box"><a href="#"></a><a href="#"></a><a href="#"></a><a href="#"></a></div>
+</body>
+</html>
