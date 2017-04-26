@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>按钮</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #box {
+            width: 153px;
+            height: 27px;
+            margin: 20px auto;
+        }
+        #box input {
+            position: absolute;
+            /*display: none;*/
+
+        }
+        #box  label{
+            width: 77px;
+            height: 27px;
+            border-radius: 15px;
+            display: block;
+            background: url("img/kkk.png") -52px 0;
+            -webkit-transition: all 500ms;
+        }
+        #box input:checked+label {
+            background-position: -0 0;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+        <input type="checkbox" checked=checked id="check">
+    <label for="check"></label>
+</div>
+</body>
+</html>
