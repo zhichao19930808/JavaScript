@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旋转</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            position: relative;
+            -webkit-animation: whirl 1s linear infinite;
+        }
+        @-webkit-keyframes whirl {
+            from{-webkit-transform: rotate(0deg)}
+            to{-webkit-transform: rotate(360deg)}
+        }
+        #box>div {
+            width: 40px;
+            height: 100px;
+            display: inline-block;
+            position: absolute;
+            left: 80px;
+            -webkit-transform-origin: center bottom;
+        }
+        .round_top {
+            -webkit-transform:rotateZ(0deg);
+        }
+        .round_right {
+            -webkit-transform:rotateZ(90deg);
+        }
+        .round_bottom {
+            -webkit-transform:rotateZ(180deg);
+        }
+        .round_left {
+            -webkit-transform:rotateZ(270deg);
+        }
+        .round1 {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background: red;
+            /*margin: auto;*/
+        }
+        .round2 {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            background: green;
+            /*margin: auto;*/
+        }
+        .round3 {
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: blue;
+            /*margin: auto;*/
+        }
+        .round4 {
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background: yellow;
+            /*margin: auto;*/
+        }
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <div class="round_top">
+        <div class="round1"></div>
+        <div class="round2"></div>
+        <div class="round3"></div>
+        <div class="round4"></div>
+    </div>
+    <div class="round_right">
+        <div class="round1"></div>
+        <div class="round2"></div>
+        <div class="round3"></div>
+        <div class="round4"></div>
+    </div>
+    <div class="round_bottom">
+        <div class="round1"></div>
+        <div class="round2"></div>
+        <div class="round3"></div>
+        <div class="round4"></div>
+    </div>
+    <div class="round_left">
+        <div class="round1"></div>
+        <div class="round2"></div>
+        <div class="round3"></div>
+        <div class="round4"></div>
+    </div>
+</div>
+</body>
+</html>
