@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>平移</title>
+    <style>
+        #box1 {
+            width: 200px;
+            height: 200px;
+            border-radius: 200px;
+            background: darkred;
+            opacity: 0.9;
+            position: absolute;
+            display: inline-block;
+            -webkit-animation: translational 6s linear 0s  infinite alternate;
+        }
+        @-webkit-keyframes translational{
+            0%{-webkit-transform:translate(0,0)}
+            25%{-webkit-transform:translate(1150px,0)}
+            50%{-webkit-transform:translate(1150px,450px)}
+            75%{-webkit-transform:translate(0,450px)}
+            100%{-webkit-transform:translate(0,0)}
+        }
+        #box2 {
+            width: 200px;
+            height: 200px;
+            border-radius: 200px;
+            background: indianred;
+            opacity: 0.9;
+            position: absolute;
+            display: inline-block;
+            -webkit-animation: translational1 8s linear 0s  infinite alternate;
+        }
+        @-webkit-keyframes translational1{
+            0%{-webkit-transform:translate(0,0)}
+            25%{-webkit-transform:translate(1000px,0)}
+            50%{-webkit-transform:translate(1150px,400px)}
+            75%{-webkit-transform:translate(50px,400px)}
+            100%{-webkit-transform:translate(0,0)}
+        }
+        #box3 {
+            width: 200px;
+            height: 200px;
+            border-radius: 200px;
+            background: blue;
+            opacity: 0.9;
+            position: absolute;
+            display: inline-block;
+            -webkit-animation: translational3 10s linear 0s  infinite alternate;
+        }
+        @-webkit-keyframes translational3{
+            0%{-webkit-transform:translate(0,0)}
+            25%{-webkit-transform:translate(900px,0)}
+            50%{-webkit-transform:translate(1150px,350px)}
+            75%{-webkit-transform:translate(150px,350px)}
+            100%{-webkit-transform:translate(0,0)}
+        }
+        #box4 {
+            width: 200px;
+            height: 200px;
+            border-radius: 200px;
+            background: black;
+            opacity: 0.9;
+            position: absolute;
+            display: inline-block;
+            -webkit-animation: translational4 2s linear 0s  infinite alternate;
+        }
+        @-webkit-keyframes translational4{
+            0%{-webkit-transform:translate(0,0)}
+            25%{-webkit-transform:translate(750px,0)}
+            50%{-webkit-transform:translate(1150px,375px)}
+            75%{-webkit-transform:translate(200px,375px)}
+            100%{-webkit-transform:translate(0,0)}
+        }
+        #box5 {
+            width: 200px;
+            height: 200px;
+            border-radius: 200px;
+            background: green;
+            opacity: 0.9;
+            position: absolute;
+            display: inline-block;
+            -webkit-animation: translational5 5s linear 0s  infinite alternate;
+        }
+        @-webkit-keyframes translational5{
+            0%{-webkit-transform:translate(0,0)}
+            25%{-webkit-transform:translate(1200px,0)}
+            50%{-webkit-transform:translate(1150px,425px)}
+            75%{-webkit-transform:translate(300px,425px)}
+            100%{-webkit-transform:translate(0,0)}
+        }
+        #box6 {
+            width: 200px;
+            height: 200px;
+            border-radius: 200px;
+            background: yellow;
+            opacity: 0.9;
+            position: absolute;
+            display: inline-block;
+            -webkit-animation: translational6 3s linear 0s  infinite alternate;
+        }
+        @-webkit-keyframes translational6{
+            0%{-webkit-transform:translate(0,0)}
+            25%{-webkit-transform:translate(1200px,0)}
+            50%{-webkit-transform:translate(1150px,425px)}
+            75%{-webkit-transform:translate(0px,425px)}
+            100%{-webkit-transform:translate(0,0)}
+        }
+        #box6 {
+            width: 200px;
+            height: 200px;
+            border-radius: 200px;
+            background: yellow;
+            opacity: 0.9;
+            position: absolute;
+            display: inline-block;
+            -webkit-animation: translational6 3s linear 0s  infinite alternate;
+        }
+        @-webkit-keyframes translational6{
+            0%{-webkit-transform:translate(0,0)}
+            25%{-webkit-transform:translate(1200px,0)}
+            50%{-webkit-transform:translate(500px,425px)}
+            75%{-webkit-transform:translate(0px,425px)}
+            100%{-webkit-transform:translate(0,0)}
+        }
+
+    </style>
+</head>
+<body>
+<div id="box1"></div>
+<div id="box2"></div>
+<div id="box3"></div>
+<div id="box4"></div>
+<div id="box5"></div>
+<div id="box6"></div>
+</body>
+</html>
