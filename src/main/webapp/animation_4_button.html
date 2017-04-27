@@ -30,6 +30,33 @@
         #box input:checked+label {
             background-position: -0 0;
         }
+        #radio {
+            width: 210px;
+            height: 25px;
+            margin:20px auto;
+            line-height: 25px;
+        }
+        #radio li {
+            float: left;
+            height: 25px;
+
+            position: relative;
+        }
+        #radio input {
+            position: absolute;
+            /*display: none;*/
+        }
+        #radio li label {
+            width: 40px;
+            height: 25px;
+            line-height: 25px;
+            display: block;
+            padding-left: 30px;
+            background: url("img/an.png") no-repeat 0 -25px;
+        }
+        #radio li input:checked+label {
+            background-position: 0 0;
+        }
     </style>
 </head>
 <body>
@@ -37,5 +64,21 @@
         <input type="checkbox" checked=checked id="check">
     <label for="check"></label>
 </div>
+<hr>
+<ul id="radio">
+    <li>
+        <input type="radio" name="radio" id="radio1">
+        <label for="radio1">大傻</label>
+    </li>
+    <li>
+        <input type="radio" name="radio" id="radio2">
+        <label for="radio2">二傻</label>
+    </li>
+    <li>
+        <input type="radio" name="radio" id="radio3">
+        <label for="radio3">傻蛋</label>
+    </li>
+
+</ul>
 </body>
 </html>
