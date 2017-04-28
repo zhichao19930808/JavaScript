@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>滚动</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #box {
+            width: 4100px;
+            height: 461px;
+            position: relative;
+            -webkit-animation: css 10s linear infinite alternate;
+        }
+        @-webkit-keyframes css {
+            0%{left: 0}
+            25%{left: -820px}
+            50%{left: -1640px}
+            75%{left: -2460px}
+            100%{left:-3280px}
+        }
+        #box>img {
+            display: block;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <img src="img/exam_1/1.jpg" height="461" width="820"/>
+    <img src="img/exam_1/2.jpg" height="461" width="820"/>
+    <img src="img/exam_1/3.jpg" height="461" width="820"/>
+    <img src="img/exam_1/4.jpg" height="461" width="820"/>
+    <img src="img/exam_1/5.jpg" height="461" width="820"/>
+</div>
+</body>
+</html>

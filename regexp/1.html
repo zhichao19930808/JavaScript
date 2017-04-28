@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var patt =/[abc]/g;
+        console.log('fafsda'.match(patt));//(2) ["a", "a"]
+        var patt1 = /[a-z]/g;
+        console.log('wefwjfSSnowjna'.match(patt1));//(12) ["w", "e", "f", "w", "j", "f", "n", "o", "w", "j", "n", "a"]
+        var  patt2 =/[A-z]/g;
+        console.log('efjwekEHWHJW'.match(patt2));//(12) ["w", "e", "f", "w", "j", "f", "n", "o", "w", "j", "n", "a"]
+        var  patt3 =/[A-z0-9]/g;
+        console.log('wfwe56435wefwuoHW'.match(patt3));//(17) ["w", "f", "w", "e", "5", "6", "4", "3", "5", "w", "e", "f", "w", "u", "o", "H", "W"]
+        var patt4 = /[^0-9]/g;
+        console.log('dqwh2312678whD'.match(patt4));//(7) ["d", "q", "w", "h", "w", "h", "D"]
+        patt.compile('(hello|green|blue|good)', 'gi');
+        console.log('hello'.match(patt));//["red", "Green", "Blue"]
+    </script>
+</head>
+<body>
+
+</body>
+</html>

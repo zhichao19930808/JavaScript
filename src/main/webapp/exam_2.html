@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #box {
+            width: 820px;
+            height: 461px;
+            overflow: hidden;
+            margin: auto;
+            position: relative;
+        }
+        #roll {
+            width: 4920px;
+            height: 461px;
+        }
+        #box>img {
+            float: left;
+        }
+        #list {
+            width: 300px;
+            height: 50px;
+            position: absolute;
+            bottom: 50px;
+            right: 50px;
+        }
+        #list>li {
+            width: 50px;
+            height: 50px;
+            background: green;
+            float: left;
+            line-height: 50px;
+            font-size: 30px;
+            text-align: center;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <ul id="roll">
+        <li><img src="img/exam_2/1.jpg" height="461" width="820"/></li>
+        <li><img src="img/exam_2/2.jpg" height="461" width="820"/></li>
+        <li><img src="img/exam_2/3.jpg" height="461" width="820"/></li>
+        <li><img src="img/exam_2/4.jpg" height="461" width="820"/></li>
+        <li><img src="img/exam_2/5.jpg" height="461" width="820"/></li>
+        <li><img src="img/exam_2/6.jpg" height="461" width="820"/></li>
+        </ul>
+        <ol id="list">
+            <li style="background: red">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ol>
+    </div>
+
+    <script>
+        var images = document.getElementById('roll').getElementsByTagName("li"),
+            lists = document.getElementById("list").getElementsByTagName("li");
+        //自动播放
+        var  k =0;
+        function roll() {
+            for(var i=0;i<lists.length;i++) {
+                images[i].style.display = 'none';
+                lists[i].style.background='green'
+            }
+            images[k].style.display = "block";
+            lists[k].style.background='red';
+            k++;
+            if (k>lists.length-1) {
+                k=0;
+            }
+        }
+
+        s1=setInterval(roll, 2000);
+        for(var i=0;i<images.length;i++) {
+            lists[i].index=i;
+            lists[i].onmouseover=function () {
+                clearInterval(s1);
+                for (var j=0;j<lists.length;j++) {
+                    lists[j].style.background = "green";
+                    images[j].style.display = "none";
+                }
+                lists[this.index].style.background = "red";
+                images[this.index].style.display = "block";
+            };
+            lists[i].onmouseout=function () {
+              k=this.index;
+              s1=setInterval(roll,2000)
+            }
+        }
+    </script>
+</body>
+</html>
