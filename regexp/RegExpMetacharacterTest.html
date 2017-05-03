@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>元字符</title>
+    <script>
+        var patt=/./g;
+        // ‘ . ’可以匹配换行符和结束符之外的所有字符
+        console.log('hsi221'.match(patt));//(6) ["h", "s", "i", "2", "2", "1"]
+        var patt1=/\w/g;
+        //\w 查找单词字符；单词字符包括：‘a-z、A-Z、0-9，以及下划线’
+        console.log('Give_ !100$%'.match(patt1));//(8) ["G", "i", "v", "e", "_", "1", "0", "0"]
+        var patt2 =/\W/g;
+        //\W 查找非单词字符
+        console.log('Give_ !100$%'.match(patt2));//(4) [" ", "!", "$", "%"]
+        var patt3 =/\d/g;
+        //\d 查找数字
+        console.log('Give_ !100$%'.match(patt3));//(3) ["1", "0", "0"]
+        var patt4 =/\D/g;
+        //\d 查找非数字
+        console.log('Give_ !100$%'.match(patt4));//(9) ["G", "i", "v", "e", "_", " ", "!", "$", "%"]
+        var patt5 =/\s/g;
+        //\s 查找空白字符
+        console.log('a d r'.match(patt5));//(2) [" ", " "]
+        var patt6 =/\S/g;
+        //\S 查找非空白字符
+        console.log('a d r'.match(patt6));//(3) ["a", "d", "r"]
+        var patt7 =/\bw3/g;
+        //\b 起始或结束
+        console.log('w3School'.match(patt7));//["w3"]
+        console.log('3wSchool'.match(patt7));//null
+        var patt8 =/w3\b/g;
+        //\b 起始或结束
+        console.log('Schoolw3'.match(patt8));//["w3"]
+        console.log('School3w'.match(patt8));//null
+        //\B与\b相反
+        //\0 查找空字符
+        //\n 查找换行符
+        //\f 查找换页符
+        //\t 查找制表符
+        //\v 查找垂直制表符
+        //\xxx 查找以八进制数xxx规定的字符
+        //\xdd 查找以十六进制数dd规定的字符
+        //\uxxxx 查找以十六进制xxxx规定的Unicode规定的字符
+    </script>
+</head>
+<body>
+<pre>
+    元字符（Metacharacter）是拥有特殊含义的字符：
+</pre>
+</body>
+</html>
